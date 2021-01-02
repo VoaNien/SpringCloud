@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  *
- * @param null
+ * @param
  * @author ouyangyi
  * @date 2020/12/31 11:51
  * @return
