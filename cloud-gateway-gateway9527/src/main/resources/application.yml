@@ -19,8 +19,16 @@ spring:
         - id: payment_routh2
 #          uri: http://localhost:8001
           uri: lb://cloud-payment-service
+#          filters:
+#            - AddRequestParameter=X-Request-Id,1024
           predicates:
             - Path=/payment/lb/**
+            - After=2021-01-08T14:17:06.163+08:00[Asia/Shanghai]
+#            - Cookie=username,oyy
+#            - Header=X-Request-Id, \d+
+#            - HOST=**.atguigu,com
+#            - Method=GET
+#            - Query=username,\d+
 eureka:
   instance:
     hostname: cloud-gateway-service
